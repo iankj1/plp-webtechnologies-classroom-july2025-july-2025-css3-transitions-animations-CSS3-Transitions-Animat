@@ -1,0 +1,61 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+section {
+  margin: 40px 0;
+}
+
+/* === Part 1: CSS Animations === */
+.btn-animate {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-animate:hover {
+  transform: scale(1.1);
+  background: #0056b3;
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: coral;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+/* === Part 3: JS-Triggered Animations === */
+#triggerBox {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: lightseagreen;
+  border-radius: 8px;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#triggerBox.animate {
+  transform: rotate(360deg) scale(1.2);
+  opacity: 0.5;
+}
